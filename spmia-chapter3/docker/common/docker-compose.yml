@@ -6,8 +6,8 @@ services:
        - "8888:8888"
 #    environment:
 #      ENCRYPT_KEY:       "IMSYMMETRIC"
-    volumes:
-      - /Users/dario/programming/microservicesInActionManning/spmia-chapter3/confsvr/src/main/resources/config/licensingservice:/Users/dario/programming/microservicesInActionManning/spmia-chapter3/confsvr/src/main/resources/config/licensingservice
+#    volumes:
+#      - /Users/dario/programming/microservicesInActionManning/spmia-chapter3/confsvr/src/main/resources/config/licensingservice:/Users/dario/programming/microservicesInActionManning/spmia-chapter3/confsvr/src/main/resources/config/licensingservice
   database:
     image: postgres:9.5
     ports:

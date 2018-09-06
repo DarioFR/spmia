@@ -6,14 +6,14 @@ services:
       service: database
     environment:
       POSTGRES_USER: "postgres_dev"
-      POSTGRES_PASSWORD: "p0stgr@s_dev"
+      POSTGRES_PASSWORD: "p0stgr@s"
       POSTGRES_DB:       "eagle_eye_dev"
   configserver:
     extends:
       file: ../common/docker-compose.yml
       service: configserver
   licensingservice:
-     image: ch3-thoughtmechanix/licensing-service
+     image: johncarnell/tmx-licensing-service:chapter3
      ports:
        - "8080:8080"
      environment:
