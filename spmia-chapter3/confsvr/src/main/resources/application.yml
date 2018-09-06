@@ -18,7 +18,7 @@ spring:
       server:
         encrypt.enabled: false
         git:
-          uri: https://github.com/DarioFR/spmia/
+          uri: https://github.com/DarioFR/spmia-configrepo
           searchPaths: licensingservice,organizationservice
           username: test
           password: test
