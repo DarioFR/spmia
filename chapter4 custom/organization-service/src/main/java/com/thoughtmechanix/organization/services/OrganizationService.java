@@ -13,6 +13,7 @@ public class OrganizationService {
     private OrganizationRepository orgRepository;
 
     public Organization getOrg(String organizationId) {
+        System.out.println("YYYYYYYYYYYYYYYYYYYYYYYYYYYY"+organizationId+" :"+orgRepository.findAll());
         return orgRepository.findById(organizationId);
     }
 
