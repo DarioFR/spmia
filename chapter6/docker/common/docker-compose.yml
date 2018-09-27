@@ -11,7 +11,7 @@ services:
     environment:
        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
        EUREKASERVER_PORT: 8761
-       ENCRYPT_KEY:       "IMSYMMETRIC"
+#       ENCRYPT_KEY:       "IMSYMMETRIC"
   zuulserver:
     image: johncarnell/tmx-zuulsvr:chapter6
     ports:
@@ -47,7 +47,7 @@ services:
       CONFIGSERVER_PORT:        "8888"
       ORGSERVERNEW_PORT:        "8087"
       ZUULSERVER_PORT:          "5555"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
+#      ENCRYPT_KEY:       "IMSYMMETRIC"
   organizationservice:
     image: johncarnell/tmx-organization-service:chapter6
     ports:
@@ -60,7 +60,7 @@ services:
       EUREKASERVER_PORT:        "8761"
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
+#      ENCRYPT_KEY:       "IMSYMMETRIC"
   orgservice-new:
     image: johncarnell/tmx-orgservice-new:chapter6
     ports:
@@ -74,16 +74,16 @@ services:
       DATABASESERVER_PORT:      "5432"
       CONFIGSERVER_PORT:        "8888"
       ENCRYPT_KEY:       "IMSYMMETRIC"
-  specialroutes-service:
-    image: johncarnell/tmx-specialroutes-service:chapter6
-    ports:
-      - "8910:8910"
-    environment:
-      PROFILE: "default"
-      SERVER_PORT: "8910"
-      CONFIGSERVER_URI: "http://configserver:8888"
-      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-      EUREKASERVER_PORT:        "8761"
-      DATABASESERVER_PORT:      "5432"
-      CONFIGSERVER_PORT:        "8888"
-      ENCRYPT_KEY:       "IMSYMMETRIC"
+#  specialroutes-service:
+#    image: johncarnell/tmx-specialroutes-service:chapter6
+#    ports:
+#      - "8910:8910"
+#    environment:
+#      PROFILE: "default"
+#      SERVER_PORT: "8910"
+#      CONFIGSERVER_URI: "http://configserver:8888"
+#      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+#      EUREKASERVER_PORT:        "8761"
+#      DATABASESERVER_PORT:      "5432"
+#      CONFIGSERVER_PORT:        "8888"
+#      ENCRYPT_KEY:       "IMSYMMETRIC"
