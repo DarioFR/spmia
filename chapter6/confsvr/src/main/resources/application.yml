@@ -19,11 +19,11 @@ spring:
         enabled: true
       server:
         encrypt.enabled: false
-      git:
-        uri: https://github.com/DarioFR/spmia-configrepo
-        searchPaths: licensingservice,organizationservice,zuulservice
-        username: test
-        password: test
+        git:
+          uri: https://github.com/DarioFR/spmia-configrepo
+          searchPaths: licensingservice,organizationservice,zuulservice
+          username: test
+          password: test
 
 #Setting logging levels
 logging:

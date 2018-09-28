@@ -8,6 +8,7 @@ services:
     image: johncarnell/tmx-confsvr:chapter6
     ports:
        - "8888:8888"
+    restart: always
     environment:
        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
        EUREKASERVER_PORT: 8761
