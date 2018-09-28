@@ -26,4 +26,5 @@ java -Dserver.port=$SERVER_PORT   \
      -Deureka.client.serviceUrl.defaultZone=$EUREKASERVER_URI             \
      -Dspring.cloud.config.uri=$CONFIGSERVER_URI                          \
      -Dspring.profiles.active=$PROFILE                                   \
+     -agentlib:jdwp=transport=dt_socket,address=8000,suspend=n,server=y \
      -jar /usr/local/organizationservice/@project.build.finalName@.jar

@@ -53,6 +53,7 @@ services:
     image: johncarnell/tmx-organization-service:chapter6
     ports:
       - "8085:8085"
+      - "8000:8000"
     environment:
       PROFILE: "default"
       SERVER_PORT: "8085"
