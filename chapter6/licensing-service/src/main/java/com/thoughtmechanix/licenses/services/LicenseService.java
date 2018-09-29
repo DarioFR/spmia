@@ -80,7 +80,8 @@ public class LicenseService {
                      @HystrixProperty(name="circuitBreaker.errorThresholdPercentage", value="75"),
                      @HystrixProperty(name="circuitBreaker.sleepWindowInMilliseconds", value="7000"),
                      @HystrixProperty(name="metrics.rollingStats.timeInMilliseconds", value="15000"),
-                     @HystrixProperty(name="metrics.rollingStats.numBuckets", value="5")}
+                     @HystrixProperty(name="metrics.rollingStats.numBuckets", value="5"),
+                     @HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="15000")}
     )
     public List<License> getLicensesByOrg(String organizationId){
         randomlyRunLong();
