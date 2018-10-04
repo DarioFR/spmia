@@ -11,7 +11,7 @@ services:
       environment:
          EUREKASERVER_PORT: 8761
          EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-         ENCRYPT_KEY:       "IMSYMMETRIC"
+#         ENCRYPT_KEY:       "IMSYMMETRIC"
   zuulserver:
       image: johncarnell/tmx-zuulsvr:chapter7
       ports:
@@ -46,7 +46,7 @@ services:
         CONFIGSERVER_URI: "http://configserver:8888"
         EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
         AUTHSERVER_URI:   "http://authenticationservice:8901/auth/user"
-        ENCRYPT_KEY:       "IMSYMMETRIC"
+#        ENCRYPT_KEY:       "IMSYMMETRIC"
   organizationservice:
       image: johncarnell/tmx-organization-service:chapter7
       ports:
@@ -61,7 +61,7 @@ services:
         CONFIGSERVER_URI: "http://configserver:8888"
         EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
         AUTHSERVER_URI:   "http://authenticationservice:8901/auth/user"
-        ENCRYPT_KEY:       "IMSYMMETRIC"
+#        ENCRYPT_KEY:       "IMSYMMETRIC"
   authenticationservice:
       image: johncarnell/tmx-authentication-service:chapter7
       ports:
@@ -74,4 +74,4 @@ services:
         EUREKASERVER_PORT: 8761
         CONFIGSERVER_URI: "http://configserver:8888"
         EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
-        ENCRYPT_KEY:       "IMSYMMETRIC"
+#        ENCRYPT_KEY:       "IMSYMMETRIC"
