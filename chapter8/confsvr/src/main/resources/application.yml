@@ -20,10 +20,11 @@ spring:
       server:
         encrypt.enabled: false
         git:
-          uri: https://github.com/carnellj/config-repo/
-          searchPaths: licensingservice,organizationservice,specialroutesservice,zuulservice
-          username: native-cloud-apps
-          password: 0ffended
+          uri: https://github.com/DarioFR/spmia-configrepo
+          searchPaths: licensingservice,organizationservice,zuulservice,authenticationservice
+          username: test
+          password: test
+
 
 
 ####
