@@ -78,4 +78,4 @@ services:
       - "9092:9092"
     environment:
       ADVERTISED_PORT: "9092"
-      ADVERTISED_HOST: "kafkaserver"
+      ADVERTISED_HOST: "localhost"

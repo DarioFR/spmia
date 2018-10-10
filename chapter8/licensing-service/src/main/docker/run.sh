@@ -23,7 +23,7 @@ echo "*******  Configuration Server has started"
 echo "********************************************************"
 echo "Waiting for the kafka server to start on port $KAFKASERVER_PORT"
 echo "********************************************************"
-while ! `nc -z kafkaserver $KAFKASERVER_PORT`; do sleep 10; done
+while ! `nc -z kafkaserver $KAFKASERVER_PORT`; do sleep 20; done
 echo "******* Kafka Server has started"
 
 echo "********************************************************"
