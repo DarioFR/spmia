@@ -49,6 +49,14 @@ public class ThreadLocalAwareStrategy extends HystrixConcurrencyStrategy{
                 keepAliveTime, unit, workQueue);
     }
 
+    //-------------------------IMPORTANTE----------------------------------------------------------------------//
+    //Questo metodo wrappa la chiamata al metodo annotato con hystrix in modo da propagare lo UserContext
+    //anche all'interno della chiamata al metodo di hystrix.Se all'interno della chiamata a un metodo annotato
+    //con Hystrix esiste anche una chiamata ad un microservizio, allora occorrerà settare pure un interceptor che propaghi
+    //lo user context sull'header della request verso il microservizio in questione. In tal modo è possibile
+    // propagare info come il token o il correlation id anche in un metodo annotato con hystrix e che al suo
+    //interno possiede  una ulteriore chiamata ad un microservizio. Un esempio di questo interceptor lo troviamo
+    //nel presente sorgente nella classe UserContextInterceptor
     @Override
     public <T> Callable<T> wrapCallable(Callable<T> callable) {
         return existingConcurrencyStrategy != null
